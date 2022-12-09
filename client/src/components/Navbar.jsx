@@ -3,9 +3,13 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import logo from "../../images/main.png";
 import { useAuth0 } from "@auth0/auth0-react";
+import Generate from "./Generate";
+import { Link } from "react-router-dom";
 
 const NavBarItem = ({ title, classprops }) => (
-  <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>
+  <li className={`mx-4 cursor-pointer hover:underline ${classprops}`}>
+    {title}
+  </li>
 );
 
 const Navbar = () => {
@@ -22,9 +26,18 @@ const Navbar = () => {
         {/* <img src={logo} alt="logo" className="w-32 cursor-pointer" /> */}
       </div>
       <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-        {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
+        <Link className="mx-4 cursor-pointer hover:underline" to="/">
+          Home
+        </Link>
+        <Link className="mx-4 cursor-pointer hover:underline" to="/order">
+          Order
+        </Link>
+        {["Tutorials", "Wallets"].map((item, index) => (
           <NavBarItem key={item + index} title={item} />
         ))}
+        <Link className="mx-4 cursor-pointer hover:underline" to="/generate">
+          Generate
+        </Link>
         {!isAuthenticated ? (
           <li
             className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]"
