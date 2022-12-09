@@ -14,8 +14,6 @@ body {
 }
 
 .gradient-bg {
-  /* background-color: #0f0e13; */
-  /* background-image: radial-gradient(at 0% 0%, #2138cc 0, transparent 40%); */
   background: rgb(0, 0, 0);
   background: linear-gradient(
     135deg,
@@ -73,3 +71,8 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo {
+  width: 50px;
+  height: 40px;
+}
