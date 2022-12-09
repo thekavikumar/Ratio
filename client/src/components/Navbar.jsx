@@ -14,7 +14,7 @@ const Navbar = () => {
   const { loginWithPopup, logout, user, isAuthenticated } = useAuth0();
   return (
     <nav className="w-full flex md:justify-center justify-between items-center p-5">
-      <div className="md:flex-[0.7] flex-initial justify-center items-center">
+      <div className="md:flex-[0.9] flex-initial justify-center items-center">
         <div className="flex cursor-pointer items-center">
           <img src={logo} alt="logo" className="logo" />
           <h1 className="text-white text-3xl ">Ratio</h1>
