@@ -5,7 +5,9 @@ import logo from "../../images/main.png";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const NavBarItem = ({ title, classprops }) => (
-  <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>
+  <li className={`mx-4 cursor-pointer hover:underline ${classprops}`}>
+    {title}
+  </li>
 );
 
 const Navbar = () => {

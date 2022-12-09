@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * html {
   padding: 0;
   margin: 0;
@@ -8,7 +7,7 @@
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,7 +17,7 @@ body {
   background: linear-gradient(
     135deg,
     rgba(0, 0, 0, 1) 0%,
-    rgb(2, 2, 74) 34%,
+    rgb(5, 5, 136) 34%,
     rgba(0, 0, 0, 1) 100%
   );
 }
@@ -75,4 +74,12 @@ body {
 .logo {
   width: 50px;
   height: 40px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.iphone {
+  margin-top: 0px;
 }
