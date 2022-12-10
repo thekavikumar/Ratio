@@ -9,6 +9,15 @@
   overflow: hidden;
 }
 
+.box-wide {
+  position: relative;
+  width: 760px;
+  border-radius: 8px;
+  background-color: rgb(0, 22, 70);
+  height: 480px;
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +38,19 @@
   animation: animate 6s linear infinite;
 }
 
+.box-wide::before {
+  /*  */
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  transform-origin: bottom right;
+  width: 760px;
+  height: 480px;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  animation: animate 6s linear infinite;
+}
+
 .box::after {
   /*  */
   content: "";
@@ -38,6 +60,20 @@
   transform-origin: bottom right;
   width: 380px;
   height: 420px;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+.box-wide::after {
+  /*  */
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  transform-origin: bottom right;
+  width: 760px;
+  height: 480px;
   background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
   animation: animate 6s linear infinite;
   animation-delay: -3s;
