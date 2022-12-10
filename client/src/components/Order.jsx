@@ -2,8 +2,9 @@ import React from "react";
 import Navbar from "./Navbar";
 import "./Generate.css";
 
-function Generate() {
+function Order() {
   const [order, setOrder] = React.useState({
+    username: "",
     privatekey: "",
     rice: false,
     sugar: false,
@@ -49,6 +50,17 @@ function Generate() {
               <input
                 type="text"
                 required
+                name="username"
+                value={order.username}
+                onChange={editOrder}
+              />
+              <span>Username</span>
+              <i></i>
+            </div>
+            <div className="inputBox">
+              <input
+                type="text"
+                required
                 name="privatekey"
                 value={order.privatekey}
                 onChange={editOrder}
@@ -65,7 +77,7 @@ function Generate() {
                   checked={order.rice}
                   onChange={toggleChecked}
                 />
-                <label for="rice">Rice</label>
+                <label htmlFor="rice">Rice</label>
               </div>
               <div className="flex gap-2 items-center">
                 <input
@@ -75,7 +87,7 @@ function Generate() {
                   checked={order.sugar}
                   onChange={toggleChecked}
                 />
-                <label for="sugar">Sugar</label>
+                <label htmlFor="sugar">Sugar</label>
               </div>
               <div className="flex gap-2 items-center">
                 <input
@@ -85,7 +97,7 @@ function Generate() {
                   checked={order.oil}
                   onChange={toggleChecked}
                 />
-                <label for="oil">Oil</label>
+                <label htmlFor="oil">Oil</label>
               </div>
             </div>
             <input
@@ -101,4 +113,4 @@ function Generate() {
   );
 }
 
-export default Generate;
+export default Order;

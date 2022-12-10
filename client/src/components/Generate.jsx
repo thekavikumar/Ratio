@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-function Order() {
+function Generate() {
   let [details, setDetails] = React.useState({
     username: "",
     phonenumber: "",
@@ -127,9 +127,9 @@ function Order() {
                 onChange={saveDetails}
               />
               <input
-                className="submitBtn"
+                className="generate-btn"
                 type="submit"
-                value="details"
+                value="Generate"
                 onClick={addDetails}
               />
             </div>
@@ -140,4 +140,4 @@ function Order() {
   );
 }
 
-export default Order;
+export default Generate;

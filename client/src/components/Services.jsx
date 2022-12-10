@@ -1,7 +1,5 @@
 import React from "react";
-import { BsShieldFillCheck } from "react-icons/bs";
-import { BiSearchAlt } from "react-icons/bi";
-import { RiHeart2Fill } from "react-icons/ri";
+import "../index.css";
 import hydera from "../../images/hydera.jpeg";
 
 const ServiceCard = ({ title, image, subtitle }) => (
@@ -22,7 +20,7 @@ const Services = () => (
   <div className="flex w-full justify-center items-center">
     <div className=" mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4">
       <div className="">
-        <h1 className="text-white text-lg sm:text-3xl py-4">
+        <h1 className="text-white text-lg sm:text-3xl py-4 text-gradient">
           Services that we known for
         </h1>
       </div>
