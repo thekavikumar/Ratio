@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-import { AiFillPlayCircle } from "react-icons/ai";
-
 import { TransactionContext } from "../context/TransactionContext";
 
 const companyCommonStyles =

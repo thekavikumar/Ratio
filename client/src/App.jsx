@@ -8,16 +8,6 @@ const App = () => (
       <Route path="/" element={<Home />} />
       <Route path="/generate" element={<Generate />} />
       <Route path="/order" element={<Order />} />
-      {/* <div className="min-h-screen gradient-bg">
-        <div className="">
-          <Navbar />
-          <Welcome />
-          <img src={iphone} alt="iphone" className="iphone" />
-        </div>
-        <Services />
-        <Transactions />
-        <Footer />
-      </div> */}
     </Routes>
   </Router>
 );
