@@ -37,18 +37,13 @@ const Welcome = () => {
 
   return (
     <div className="flex flex-col">
-      <h1 className="text-gradient text-center text-[65px] mt-[20px] text-white">
+      <h1 className="text-gradient text-center text-[55px] mt-[10px] text-white">
         Welcome to Ratio
       </h1>
-      <h1 className="text-gradient text-center text-4xl text-white">
-        Prevent Misuse Of Government Resources
+      <h1 className="text-gradient text-center text-2xl text-white">
+        Prevent Misuse Of Government Resources with Blockchain Technology
       </h1>
-      <h1 className="text-gradient text-center text-4xl mt-[10px] text-white">
-        With Blockchain Technology
-      </h1>
-      <h1 className="text-gradient text-[21px] mt-[14px] text-center text-white">
-        Our Application run in all kind of devices
-      </h1>
+      <h1 className="text-gradient text-center text-2xl mt-[10px] text-white"></h1>
     </div>
   );
 };

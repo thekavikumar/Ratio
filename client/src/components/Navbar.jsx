@@ -7,7 +7,9 @@ import Generate from "./order";
 import { Link } from "react-router-dom";
 
 const NavBarItem = ({ title, classprops }) => (
-  <li className={`mx-4 cursor-pointer hover:underline ${classprops}`}>
+  <li
+    className={`mx-4 cursor-pointer hover:bg-[#45f3ff] transition-all p-2 rounded-md ease-in delay-75 hover:text-black ${classprops}`}
+  >
     {title}
   </li>
 );
@@ -26,13 +28,23 @@ const Navbar = () => {
         {/* <img src={logo} alt="logo" className="w-32 cursor-pointer" /> */}
       </div>
       <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-        <Link className="mx-4 cursor-pointer hover:underline" to="/">
+        <Link
+          className="mx-4 cursor-pointer hover:bg-[#45f3ff] transition-all p-2 rounded-md ease-in delay-75 hover:text-black"
+          to="/"
+        >
           Home
+          <i></i>
         </Link>
-        <Link className="mx-4 cursor-pointer hover:underline" to="/generate">
+        <Link
+          className="mx-4 cursor-pointer hover:bg-[#45f3ff] transition-all p-2 rounded-md ease-in delay-75 hover:text-black"
+          to="/generate"
+        >
           Generate
         </Link>
-        <Link className="mx-4 cursor-pointer hover:underline" to="/order">
+        <Link
+          className="mx-4 cursor-pointer hover:bg-[#45f3ff] transition-all p-2 rounded-md ease-in delay-75 hover:text-black"
+          to="/order"
+        >
           Order
         </Link>
         {["Tutorials", "Wallets"].map((item, index) => (
@@ -41,14 +53,14 @@ const Navbar = () => {
 
         {!isAuthenticated ? (
           <li
-            className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]"
+            className="bg-[#45f3ff] py-2 px-7 text-black mx-4 rounded-full cursor-pointer hover:bg-[#45f3ff]"
             onClick={loginWithPopup}
           >
             Login
           </li>
         ) : (
           <li
-            className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]"
+            className="bg-[#45f3ff] py-2 px-7 mx-4 text-black rounded-full cursor-pointer hover:bg-[#45f3ff]"
             onClick={logout}
           >
             Logout
