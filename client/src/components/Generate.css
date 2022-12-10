@@ -170,6 +170,18 @@
   background: #45f3ff;
   padding: 11px 13px;
   width: 100px;
+  margin-top: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.generate-btn {
+  /*  */
+  border: none;
+  outline: none;
+  background: #45f3ff;
+  padding: 11px 13px;
+  width: 100px;
   margin-top: 20px;
   border-radius: 4px;
   cursor: pointer;
