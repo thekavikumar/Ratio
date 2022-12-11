@@ -1,6 +1,5 @@
 import React from "react";
 import { Footer, Navbar, Services, Transactions, Welcome } from "./components";
-import iphone from "../images/Composition.png";
 function Home() {
   return (
     <div className="min-h-screen gradient-bg">

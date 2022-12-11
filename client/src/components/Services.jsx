@@ -1,6 +1,6 @@
 import React from "react";
 import "../index.css";
-import hydera from "../../images/hydera.jpeg";
+import hydera from "../images/hydera.jpeg";
 
 const ServiceCard = ({ title, image, subtitle }) => (
   <div className="black-glassmorphism px-1 py-8 m-2 cursor-pointer">

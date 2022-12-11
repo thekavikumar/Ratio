@@ -1,9 +1,8 @@
 import React from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-import logo from "../../images/main.png";
+import logo from "../images/main.png";
 import { useAuth0 } from "@auth0/auth0-react";
-import Generate from "./order";
 import { Link } from "react-router-dom";
 
 const NavBarItem = ({ title, classprops }) => (
