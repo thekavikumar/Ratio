@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import { collection, addDoc } from "firebase/firestore";
 import { db, storage } from "../firebase";
 import { ref, uploadBytesResumable } from "firebase/storage";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Generate() {
   const [documentUri, setDocumentUri] = useState("");
@@ -34,6 +36,8 @@ function Generate() {
         user: details,
       });
       console.log("Document written with ID: ", docRef.id);
+      const notify = () => toast("Your Public Key is Generated!");
+      notify();
     } catch (e) {
       console.error("Error adding document: ", e);
     }
@@ -44,6 +48,7 @@ function Generate() {
       <Navbar />
       <div>
         <div className="parent flex justify-center items-center mt-[100px]">
+          <ToastContainer />
           <div className="box-wide">
             <div className="form">
               <h2 className="text-[22px] font-semibold text-[#45f3ff] text-center tracking-[0.1em]">
