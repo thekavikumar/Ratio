@@ -50,7 +50,7 @@ async function main() {
     .setGas(100000)
     .setFunction(
       "getMobileNumber",
-      new ContractFunctionParameters().addString("Alice")
+      new ContractFunctionParameters().addString("Anirudh")
     );
   const contractQuerySubmit = await contractQueryTx.execute(client);
   const contractQueryResult = contractQuerySubmit.getUint256(0);
@@ -64,7 +64,7 @@ async function main() {
     .setGas(100000)
     .setFunction(
       "setMobileNumber",
-      new ContractFunctionParameters().addString("Bob").addUint256(222222)
+      new ContractFunctionParameters().addString("Anirudh").addUint256(89254566198)
     );
   const contractExecuteSubmit = await contractExecuteTx.execute(client);
   const contractExecuteRx = await contractExecuteSubmit.getReceipt(client);
@@ -78,7 +78,7 @@ async function main() {
     .setGas(100000)
     .setFunction(
       "getMobileNumber",
-      new ContractFunctionParameters().addString("Bob")
+      new ContractFunctionParameters().addString("Anirudh")
     );
   const contractQuerySubmit1 = await contractQueryTx1.execute(client);
   const contractQueryResult1 = contractQuerySubmit1.getUint256(0);

@@ -16,7 +16,7 @@ const NavBarItem = ({ title, classprops }) => (
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
 
-  const { loginWithPopup, logout, user, isAuthenticated } = useAuth0();
+  const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
   return (
     <nav className="w-full flex md:justify-center justify-between items-center p-5">
       <div className="md:flex-[0.9] flex-initial justify-center items-center">
@@ -53,7 +53,7 @@ const Navbar = () => {
         {!isAuthenticated ? (
           <li
             className="bg-[#45f3ff] py-2 px-7 text-black mx-4 rounded-full cursor-pointer hover:bg-[#45f3ff]"
-            onClick={loginWithPopup}
+            onClick={loginWithRedirect}
           >
             Login
           </li>

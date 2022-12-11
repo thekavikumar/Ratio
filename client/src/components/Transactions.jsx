@@ -47,7 +47,7 @@ const TransactionsCard = ({
             </p>
           </a>
           <p className="text-white text-lg tracking-widest hover:bg-white hover:text-black ">
-            AMOUNT : {amount} ETH
+            AMOUNT : {amount} HBar
           </p>
           {message && (
             <>
