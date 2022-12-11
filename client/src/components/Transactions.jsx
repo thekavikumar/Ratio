@@ -13,29 +13,28 @@ const TransactionsCard = ({
   message,
   keyword,
   amount,
-  url,
 }) => {
   const gifUrl = useFetch({ keyword });
 
   return (
     <div
-      className="bg-[#181918] m-4 flex flex-1
+      className=" m-4 flex flex-1
       2xl:min-w-[450px]
       2xl:max-w-[500px]
       sm:min-w-[270px]
       sm:max-w-[300px]
       min-w-full
-      flex-col p-3 rounded-md hover:shadow-2xl"
+      flex-col p-8 rounded-md black-glassmorphism hover:scale-105 hover:rotate-1 transition-all delay-100 ease-in"
     >
-      <div className="flex flex-col items-center w-full mt-3">
-        <div className="display-flex justify-start w-full mb-6 p-2">
+      <div className="flex flex-col items-center w-full ">
+        <div className="flex flex-col gap-3 justify-start w-full  p-2 ">
           <a
             href={`https://ropsten.etherscan.io/address/${addressFrom}`}
             target="_blank"
             rel="noreferrer"
           >
-            <p className="text-white text-base">
-              From: {shortenAddress(addressFrom)}
+            <p className="text-white text-md tracking-widest hover:bg-white hover:text-black">
+              FROM : {shortenAddress(addressFrom)}
             </p>
           </a>
           <a
@@ -43,25 +42,22 @@ const TransactionsCard = ({
             target="_blank"
             rel="noreferrer"
           >
-            <p className="text-white text-base">
-              To: {shortenAddress(addressTo)}
+            <p className="text-white text-md tracking-widest hover:bg-white hover:text-black">
+              TO : {shortenAddress(addressTo)}
             </p>
           </a>
-          <p className="text-white text-base">Amount: {amount} ETH</p>
+          <p className="text-white text-lg tracking-widest hover:bg-white hover:text-black ">
+            AMOUNT : {amount} ETH
+          </p>
           {message && (
             <>
               <br />
-              <p className="text-white text-base">Message: {message}</p>
+              <p className="text-white text-base ">Message: {message}</p>
             </>
           )}
         </div>
-        <img
-          src={gifUrl || url}
-          alt="nature"
-          className="w-full h-64 2xl:h-96 rounded-md shadow-lg object-cover"
-        />
-        <div className="bg-black p-3 px-5 w-max rounded-3xl -mt-5 shadow-2xl">
-          <p className="text-[#37c7da] font-bold">{timestamp}</p>
+        <div className="w-full  py-2 blue-glassmorphism mt-4">
+          <p className="text-black text-center font-bold">{timestamp}</p>
         </div>
       </div>
     </div>
